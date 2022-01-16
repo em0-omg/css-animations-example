@@ -1,0 +1,82 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.btn {
+  width: 300px;
+  height: 60px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: transparent;
+  text-align: center;
+  line-height: 60px;
+  border: 3px solid #f6b93b;
+  font-weight: bold;
+  letter-spacing: 2px;
+  position: relative;
+  transition: all 0.2s;
+  color: #f6b93b;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+
+.btn::before,
+.btn::after,
+.btn span::before,
+.btn span::after {
+  content: '';
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: #f6b93b;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+.btn::before {
+  top: 0;
+  left: -25%;
+}
+
+.btn:hover:before {
+  top: 0;
+  left: 0;
+}
+
+.btn::after {
+  top: -100%;
+  left: 25%;
+}
+
+.btn:hover:after {
+  top: 0;
+  left: 25%;
+}
+
+.btn span::before {
+  top: 100%;
+  right: 25%;
+}
+
+.btn:hover span:before {
+  top: 0;
+  right: 25%;
+}
+
+.btn span::after {
+  top: 0;
+  right: -25%;
+}
+
+.btn:hover span:after {
+  top: 0;
+  right: 0;
+}
+
+.btn:hover {
+  color: #262626;
+}
